@@ -1,0 +1,20 @@
+{
+  "name": "PainManger",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  }
+  "author": "PJ",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.0",
+    "jade": "^1.7.0",
+    "stylus": "^0.49.2"
+  }
+}
