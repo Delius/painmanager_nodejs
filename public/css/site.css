@@ -1,0 +1,19 @@
+body {
+  padding-top: 90px;
+}
+.navbar-inner a.brand {
+  margin-top: -5px;
+  margin-bottom: -20px;
+}
+.navbar-inner a.brand h6 {
+  color: #777;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+footer p {
+  border-top: 1px solid #777;
+  font: xx-small;
+}

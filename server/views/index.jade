@@ -1,6 +1,23 @@
 extends ../includes/layout
 
 block main-content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                a.brand(href="/") PainManager
+                    h6 Chronic Pain Managment Program
+                .nav-collapse.collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/") Home
+
+
+
+
     section.content
         div(ng-view)
      h2= mongoMessage
+
+     footer.container
+            p
+         h6.text-center &copy; 2013 PainManager ltd
