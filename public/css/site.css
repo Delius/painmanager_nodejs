@@ -1,11 +1,11 @@
 body {
   padding-top: 90px;
 }
-.navbar-inner a.brand {
-  margin-top: -5px;
+.navbar-header a.navbar-brand {
+  margin-top: -15px;
   margin-bottom: -20px;
 }
-.navbar-inner a.brand h6 {
+.navbar-header a.navbar-brand h6 {
   color: #777;
 }
 footer {
@@ -14,6 +14,5 @@ footer {
   margin-top: 20px;
 }
 footer p {
-  border-top: 1px solid #777;
-  font: xx-small;
+  border-top: 3px solid #777;
 }

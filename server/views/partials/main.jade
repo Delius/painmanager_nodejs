@@ -1,2 +1,12 @@
-h1 This is a partial
-h2 {{myVar}}
+.container
+    .jumbotron
+        h1 PainManager
+        p Welcome to PainManager! The most comphrensive and complete chronic pain managment program
+
+
+    .row
+        .col-md-6
+            div(ng-include="'/partials/featured-programmes'")
+
+        .col-md-6
+            div(ng-include="'/partials/new-programmes'")
