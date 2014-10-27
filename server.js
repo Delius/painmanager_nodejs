@@ -77,8 +77,8 @@ db.once('open', function callback() {
 //    mongoMessage = messageDoc.message;
 //});
 
-app.get('/partials/:partialPath', function(req, res) {
-    res.render('partials/' + req.params.partialPath);
+app.get('/partials/*', function(req, res) {
+    res.render('partials/' + req.params);
 });
 
 app.get('*', function(req, res) {
