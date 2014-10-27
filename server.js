@@ -17,12 +17,13 @@ function compile(str, path){
 //Development
 //---------------
 
-if ('development' === env) {
+if ('development' == env) {
     // configure stuff here
+
     app.set('views', __dirname + '/server/views');
     app.set('view engine', 'jade');
     app.use(morgan('dev'));
-    mongoose.connect('mongodb://localhost/painmanager');
+    mongoose.connect('mongodb://pawel:painmanagerdev@ds049150.mongolab.com:49150/painmanage_dev');
     app.use(bodyParser.urlencoded({
         extended: true
     }));
@@ -62,29 +63,27 @@ if ('development' === env) {
 
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', function callback(){
-    console.log('painmanager db opened');
+db.on('error', console.error.bind(console, 'connection error...'));
+db.once('open', function callback() {
+    console.log('multivision db opened');
 });
-var messageShema = mongoose.Schema({message: String});
-var Message = mongoose.model('Message', messageShema);
-Message.findOne().exec(function(err, messageDoc){
+var messageSchema = mongoose.Schema({message: String});
+var Message = mongoose.model('Message', messageSchema);
+var mongoMessage;
+Message.findOne().exec(function(err, messageDoc) {
     mongoMessage = messageDoc.message;
 });
 
-//--------------------------------------------------//
-
-app.get('/partials/:partialPath', function(req, res){
+app.get('/partials/:partialPath', function(req, res) {
     res.render('partials/' + req.params.partialPath);
 });
 
-
-app.get('*', function(req, res){
+app.get('*', function(req, res) {
     res.render('index', {
         mongoMessage: mongoMessage
     });
 });
 
-var port = process.env.PORT ||3030;
+var port = process.env.PORT || 3030;
 app.listen(port);
-console.log('Listenng on port' + port + '...');
+console.log('Listening on port ' + port + '...');
