@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
+    ;
 
 
 module.exports = function(config) {
@@ -9,4 +10,19 @@ module.exports = function(config) {
         console.log('multivision db opened');
     });
 
+    var userSchema = mongoose.Schema({
+        firstName: String,
+        lastName: String,
+        username: String
+    });
+
+    var User =  mongoose.model('User', userSchema);
+
+    User.find({}).exec(function(err, collection) {
+        if (collection.length === 0) {
+            User.create({firstName:'Pawel', lastName:'Jakubowski', username:'ismc2222'});
+            User.create({firstName:'Ewa', lastName:'Palomino', username:'palomino'});
+            User.create({firstName:'Frank', lastName:'Knight', username:'frank'});
+        }
+    })
 }

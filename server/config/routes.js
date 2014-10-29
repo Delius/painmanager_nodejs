@@ -1,4 +1,4 @@
-
+var auth = require('./auth');
 
 module.exports = function(app) {
 
@@ -7,6 +7,8 @@ module.exports = function(app) {
         //console.log(req.params[0]);
         res.render('../../public/app/' + req.params[0]);
     });
+
+    app.post('/login', auth.authenticate);
 
     app.get('*', function(req, res) {
         res.render('index');

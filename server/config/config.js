@@ -3,7 +3,7 @@ var rootPath = path.normalize(__dirname + '/../../');
 
 module.exports = {
     development: {
-        db: 'pawel:painmanagerdev@ds049150.mongolab.com:49150/pain',
+        db: 'pawel:painmanagerdev@ds049150.mongolab.com:49150/painmanage_dev',
         rootPath: rootPath,
         port: process.env.PORT || 3030
     },
