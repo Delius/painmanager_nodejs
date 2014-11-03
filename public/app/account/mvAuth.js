@@ -3,7 +3,7 @@ angular.module('app').factory('mvAuth', function($http, mvIdentity, $q ) {
         authenticateUser: function(username, password) {
             var dfd = $q.defer();
             $http.post('/login', {username: username, password: password}).then(function (response) {
-                if (response.data.success) {
+                if(response.data.success) {
 
                     dfd.resolve(true);
                 } else {
