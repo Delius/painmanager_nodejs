@@ -3,4 +3,4 @@ Secure Password using hashing (encryption
 Client side authorization (user roles)
 Server side authorization (user roles)
 Admin Page protected from users
-Karma and Testing
+Karma Testing implemented (user roles)
