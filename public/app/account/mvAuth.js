@@ -15,16 +15,17 @@ angular.module('app').factory('mvAuth', function($http, mvIdentity, $q, mvUser )
             return dfd.promise;
 
         },
-        createUser: function(newUserData){
+        createUser: function(newUserData) {
             var newUser = new mvUser(newUserData);
             var dfd = $q.defer();
 
-            nevUser.$save().then(function() {
-                mvIdentity.currentUser = nevUser;
+            newUser.$save().then(function() {
+                mvIdentity.currentUser = newUser;
                 dfd.resolve();
-            }, function(response){
+            }, function(response) {
                 dfd.reject(response.data.reason);
             });
+
             return dfd.promise;
         },
 
