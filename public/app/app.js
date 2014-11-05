@@ -30,6 +30,11 @@ angular.module('app').config(function($routeProvider,$locationProvider){
             templateUrl: '/partials/programmes/programmes-list',
             controller: 'mvProgrammeListCtrl'
         })
+
+        .when('/programmes/:id', { templateUrl: '/partials/programmes/programme-details',
+            controller: 'mvProgrammeDetailCtrl'
+        });
+
 });
 
 angular.module('app').run(function($rootScope,$location){

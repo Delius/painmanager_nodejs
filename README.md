@@ -9,3 +9,4 @@ User profile (client and server side)/ to do => redirect after update to user pr
 Programmes list
 Filtering and sorting
 Caching Pages Implemented
+Programme pages wit programme details 
