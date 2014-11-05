@@ -25,6 +25,11 @@ angular.module('app').config(function($routeProvider,$locationProvider){
             templateUrl: '/partials/account/profile',
             controller: 'mvProfileCtrl', resolve: routeRoleChecks.user
         })
+
+        .when('/programmes', {
+            templateUrl: '/partials/programmes/programmes-list',
+            controller: 'mvProgrammeListCtrl'
+        })
 });
 
 angular.module('app').run(function($rootScope,$location){

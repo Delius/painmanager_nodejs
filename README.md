@@ -5,4 +5,7 @@ Server side authorization (user roles)
 Admin Page protected from users
 Karma Testing implemented (user roles)
 Signup page and user Signup validations
-User edit page (client and server side)/ to do => redirect after update to user profile
+User profile (client and server side)/ to do => redirect after update to user profile
+Programmes list
+Filtering and sorting
+Caching Pages Implemented

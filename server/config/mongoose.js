@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
-    userModel = require('../mdels/User');
-
+    userModel = require('../mdels/User'),
+    programmeModel = require('../mdels/Programme');
 
 
 module.exports = function(config) {
@@ -11,7 +11,7 @@ module.exports = function(config) {
         console.log('painmanager db opened');
     });
     userModel.createDefaultUsers();
-
+    programmeModel.createDefaultProgrammes();
 
 }
 
